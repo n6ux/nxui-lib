@@ -29,7 +29,10 @@ function lib:CreateWindow()
 
         function newwindow.Render()
             local frame = Instance.new("Frame")
-            frame.Parent = lib.activescreengui
+            frame.Parent = coregui:WaitForChild("NXUI")
+            
+            print(newwindow.Size)
+            print(newwindow.Position)
 
             frame.Name = newwindow.Name.."_WINDOW"
             frame.Size = newwindow.Size
