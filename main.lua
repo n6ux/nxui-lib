@@ -16,14 +16,14 @@ function lib:Initialize()
     warn("[NXUI]: Lib initialized!")
 end
 
-function lib:CreateAndRenderWindow(draggable, size, pos, name)
+function lib:CreateAndRenderWindow(properties: {}) --draggable, size, pos, name
     if lib.initialized == true then
         local frame = Instance.new("Frame")
         frame.Parent = lib.activescreengui
 
-        frame.Name = name.."_WINDOW"
-        frame.Size = size
-        frame.Position = pos
+        frame.Name = properties.name.."_WINDOW"
+        frame.Size = properties.size
+        frame.Position = properties.pos
     else
         warn("[NXUI]: NXUI has not been initialized, event failed.")
     end
