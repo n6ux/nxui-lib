@@ -23,8 +23,8 @@ function lib:CreateWindow()
         setmetatable(newwindow, lib)
 
         newwindow.Dragabble = false
-        newwindow.Size = UDim2.new()
-        newwindow.Position = UDim2.new()
+        newwindow.Size = UDim2.new(0.5, 0, 0.5, 0)
+        newwindow.Position = UDim2.new(0.5, 0, 0.5, 0)
         newwindow.Name = ""
 
         function newwindow.Render()
