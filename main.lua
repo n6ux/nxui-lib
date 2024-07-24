@@ -13,6 +13,8 @@ function lib:Initialize()
 
     lib.initialized = true
     lib.activescreengui = screengui
+
+    warn("[NXUI]: Lib initialized!")
 end
 
 function lib:CreateWindow()
