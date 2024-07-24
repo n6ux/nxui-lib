@@ -27,12 +27,11 @@ function lib:CreateWindow()
         newwindow.Position = UDim2.new(0.5, 0, 0.5, 0)
         newwindow.Name = ""
 
+        print(newwindow)
+
         function newwindow.Render()
             local frame = Instance.new("Frame")
-            frame.Parent = coregui:WaitForChild("NXUI")
-            
-            print(newwindow.Size)
-            print(newwindow.Position)
+            frame.Parent = lib.activescreengui
 
             frame.Name = newwindow.Name.."_WINDOW"
             frame.Size = newwindow.Size
