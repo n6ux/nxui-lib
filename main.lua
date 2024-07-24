@@ -1,7 +1,6 @@
 local coregui = game:GetService("CoreGui")
 
 local lib = {}
-lib.__index = lib
 
 lib.initialized = false
 lib.activescreengui = nil
@@ -17,28 +16,14 @@ function lib:Initialize()
     warn("[NXUI]: Lib initialized!")
 end
 
-function lib:CreateWindow()
+function lib:CreateAndRenderWindow(draggable, size, pos, name)
     if lib.initialized == true then
-        local newwindow = {}
-        setmetatable(newwindow, lib)
+        local frame = Instance.new("Frame")
+        frame.Parent = lib.activescreengui
 
-        newwindow.Dragabble = false
-        newwindow.Size = UDim2.new(0.5, 0, 0.5, 0)
-        newwindow.Position = UDim2.new(0.5, 0, 0.5, 0)
-        newwindow.Name = ""
-
-        print(newwindow)
-
-        function newwindow.Render()
-            local frame = Instance.new("Frame")
-            frame.Parent = lib.activescreengui
-
-            frame.Name = newwindow.Name.."_WINDOW"
-            frame.Size = newwindow.Size
-            frame.Position = newwindow.Position
-        end
-
-        return newwindow
+        frame.Name = name.."_WINDOW"
+        frame.Size = size
+        frame.Position = pos
     else
         warn("[NXUI]: NXUI has not been initialized, event failed.")
     end
