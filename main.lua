@@ -41,7 +41,7 @@ function lib:CreateAndRenderWindow(properties: {}) --draggable, size, pos, name
         textlabel.Text = properties.name
         textlabel.BackgroundTransparency = 1
         textlabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-        textlabel.FontFace = Enum.Font.Gotham.Name
+        textlabel.FontFace = Enum.Font.Gotham
         textlabel.TextScaled = true
     else
         warn("[NXUI]: NXUI has not been initialized, event failed.")
