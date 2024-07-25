@@ -27,7 +27,7 @@ function lib:CreateAndRenderWindow(properties: {}) --draggable, size, pos, name
         frame.Position = properties.pos
         frame.BackgroundTransparency = 1
 
-        --/Making the frame look nicer
+        --[[/Making the frame look nicer
         frame.BackgroundColor3 = Color3.fromRGB(31, 40, 66)
         frame.BackgroundTransparency = .35
 
@@ -42,7 +42,7 @@ function lib:CreateAndRenderWindow(properties: {}) --draggable, size, pos, name
         textlabel.BackgroundTransparency = 1
         textlabel.TextColor3 = Color3.fromRGB(255, 255, 255)
         textlabel.FontFace = Enum.Font.Gotham.Name
-        textlabel.TextScaled = true
+        textlabel.TextScaled = true]]
     else
         warn("[NXUI]: NXUI has not been initialized, event failed.")
     end
