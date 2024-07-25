@@ -32,18 +32,19 @@ function lib:CreateAndRenderWindow(properties: {}) --draggable, size, pos, name
         frame.BackgroundTransparency = .35
 
         local uicorner = Instance.new("UICorner")
+        uicorner.Parent = frame
         uicorner.CornerRadius = UDim.new(0, 8)
 
         local textlabel = Instance.new("TextLabel")
         textlabel.Parent = frame
         textlabel.Size = UDim2.new(0, 163, 0, 35)
-        textlabel.Position = UDim2.new(0, 0, 0, 0)
+        textlabel.Position = UDim2.new(0, 25, 0, 0)
         textlabel.Text = properties.name
         textlabel.BackgroundTransparency = 1
         textlabel.TextColor3 = Color3.fromRGB(255, 255, 255)
         textlabel.TextScaled = true
         textlabel.TextXAlignment = Enum.TextXAlignment.Left
-        textlabel.Font = Enum.Font.Gotham
+        textlabel.Font = Enum.Font.GothamBold
     else
         warn("[NXUI]: NXUI has not been initialized, event failed.")
     end
