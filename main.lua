@@ -32,8 +32,8 @@ function lib:CreateAndRenderWindow(properties: {}) --draggable, size, pos, name
         frame.BackgroundTransparency = .35
 
         local uicorner = Instance.new("UICorner")
-        uicorner.Parent = frame
         uicorner.CornerRadius = UDim.new(0, 8)
+        uicorner.Parent = frame
 
         local textlabel = Instance.new("TextLabel")
         textlabel.Parent = frame
