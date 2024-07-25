@@ -3,8 +3,8 @@ local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/n6ux/nxui
 lib:Initialize()
 
 lib:CreateAndRenderWindow({
-    true,
-    UDim2.new(0, 650, 0, 450),
-    UDim2.new(0.5, 0, 0.5, 0),
-    "testing"
+    draggable = true,
+    size = UDim2.new(0, 650, 0, 450),
+    pos = UDim2.new(0.5, 0, 0.5, 0),
+    name = "testing"
 })
