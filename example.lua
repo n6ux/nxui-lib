@@ -1,4 +1,4 @@
-local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/n6ux/nxui-lib/main/main.lua"))()
+local lib = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/n6ux/nxui-lib/main/main.lua"))()
 
 lib:Initialize()
 
