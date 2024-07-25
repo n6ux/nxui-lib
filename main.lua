@@ -27,7 +27,7 @@ function lib:CreateAndRenderWindow(properties: {}) --draggable, size, pos, name
         frame.Position = properties.pos
         frame.BackgroundTransparency = 1
 
-        --/Making the frame look nicer
+        --/Making the frame look nicer 
         frame.BackgroundColor3 = Color3.fromRGB(31, 40, 66)
         frame.BackgroundTransparency = .35
 
