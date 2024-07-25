@@ -40,7 +40,8 @@ function lib:CreateAndRenderWindow(properties: {}) --draggable, size, pos, name
         textlabel.Position = UDim2.new(0, 0, 0, 0)
         textlabel.Text = properties.name
         textlabel.BackgroundTransparency = .25
-        textlabel.TextColor3 = Color3.fromRGB(42, 51, 83)
+        textlabel.BackgroundColor3 = Color3.fromRGB(42, 51, 83)
+        textlabel.TextColor3 = Color3.fromRGB(83, 93, 184)
         textlabel.TextScaled = true
         textlabel.TextXAlignment = Enum.TextXAlignment.Left
         textlabel.Font = Enum.Font.GothamBold
