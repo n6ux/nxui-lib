@@ -1,6 +1,6 @@
 local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/n6ux/nxui-lib/main/main.lua"))()
 
-lib:Initalize()
+lib:Initialize()
 
 lib:CreateAndRenderWindow({
     true,
