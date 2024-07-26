@@ -38,7 +38,7 @@ function lib:CreateAndRenderWindow(properties: {}) --draggable, size, pos, name
         textlabel.Parent = frame
         textlabel.Size = UDim2.new(frame.Size.X.Scale, frame.Size.X.Offset, 0, 35)
         textlabel.Position = UDim2.new(0, 0, 0, 0)
-        textlabel.Text = properties.name
+        textlabel.Text = " "..properties.name
         textlabel.BackgroundTransparency = .25
         textlabel.BackgroundColor3 = Color3.fromRGB(42, 51, 83)
         textlabel.TextColor3 = Color3.fromRGB(83, 93, 184)
