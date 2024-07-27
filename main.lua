@@ -35,12 +35,13 @@ function lib:CreateAndRenderWindow(properties: {}) --draggable, pos, name
         --Adding information section
         local infoframe = Instance.new("Frame")
         infoframe.Parent = frame
-        frame.Position = UDim2.new(0.019, 0, 0.219, 0)
 
-        infoframe.BackgroundColor3 = Color3.fromRGB(93, 77, 117)
+        infoframe.BackgroundColor3 = Color3.fromRGB(33, 22, 46)
         infoframe.BorderColor3 = Color3.fromRGB(41, 41, 41)
         infoframe.BorderMode = Enum.BorderMode.Outline
         infoframe.BorderSizePixel = 2.3
+        infoframe.Position = UDim2.new(0.019, 0, 0.086, 0)
+        infoframe.Size = UDim2.new(0, 491, 0, 619)
     else
         warn("[NXUI]: NXUI has not been initialized, event failed.")
     end
