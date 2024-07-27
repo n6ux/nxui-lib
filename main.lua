@@ -28,9 +28,19 @@ function lib:CreateAndRenderWindow(properties: {}) --draggable, pos, name
 
         --/Making the frame look nicer 
         frame.BackgroundColor3 = Color3.fromRGB(30, 25, 46)
-        frame.BorderColor3 = Color3.fromRGB(92, 29, 163)
+        frame.BorderColor3 = Color3.fromRGB(112, 83, 158)
         frame.BorderMode = Enum.BorderMode.Outline
         frame.BorderSizePixel = 2.3
+
+        --Adding information section
+        local infoframe = Instance.new("Frame")
+        infoframe.Parent = frame
+        frame.Position = UDim2.new(0.019, 0, 0.219, 0)
+
+        infoframe.BackgroundColor3 = Color3.fromRGB(51, 43, 78)
+        infoframe.BorderColor3 = Color3.fromRGB(41, 41, 41)
+        infoframe.BorderMode = Enum.BorderMode.Outline
+        infoframe.BorderSizePixel = 2.3
     else
         warn("[NXUI]: NXUI has not been initialized, event failed.")
     end
