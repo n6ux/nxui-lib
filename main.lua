@@ -42,6 +42,18 @@ function lib:CreateAndRenderWindow(properties: {}) --draggable, pos, name
         infoframe.BorderSizePixel = 2.3
         infoframe.Position = UDim2.new(0.019, 0, 0.086, 0)
         infoframe.Size = UDim2.new(0, 491, 0, 619)
+
+        --Window text
+        local textlabel = Instance.new("TextLabel")
+        textlabel.Parent = frame
+        textlabel.Position = UDim2.new(0, 0, 0, 0)
+
+        textlabel.BackgroundTransparency = 1
+        textlabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+        textlabel.RichText = true
+        textlabel.TextSize = 23
+        textlabel.Font = Enum.Font.Code
+        textlabel.Text = "name"
     else
         warn("[NXUI]: NXUI has not been initialized, event failed.")
     end
