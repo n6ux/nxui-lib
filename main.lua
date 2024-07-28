@@ -46,7 +46,7 @@ function lib:CreateAndRenderWindow(properties: {}) --draggable, pos, name
         --Window text
         local textlabel = Instance.new("TextLabel")
         textlabel.Parent = frame
-        textlabel.Position = UDim2.new(0, 0, 0, 0)
+        textlabel.Position = UDim2.new(0, -15, 0, 0)
 
         textlabel.BackgroundTransparency = 1
         textlabel.TextColor3 = Color3.fromRGB(255, 255, 255)
