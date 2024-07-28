@@ -46,14 +46,14 @@ function lib:CreateAndRenderWindow(properties: {}) --draggable, pos, name
         --Window text
         local textlabel = Instance.new("TextLabel")
         textlabel.Parent = frame
-        textlabel.Position = UDim2.new(0, -15, 0, 0)
+        textlabel.Position = UDim2.new(0, 25, 0, 11)
 
         textlabel.BackgroundTransparency = 1
         textlabel.TextColor3 = Color3.fromRGB(255, 255, 255)
         textlabel.RichText = true
         textlabel.TextSize = 23
-        textlabel.Font = Enum.Font.Code
-        textlabel.Text = "name"
+        textlabel.Font = Enum.Font.TitilliumWeb
+        textlabel.Text = properties.name
     else
         warn("[NXUI]: NXUI has not been initialized, event failed.")
     end
