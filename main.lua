@@ -19,7 +19,6 @@ local lib = {
 				title = 1000,
 				tabcategories = 999
 			},
-			addblurtotabholder = false --REQUIRES LOADSTRING TO BE ENABLED AND CAN LITERALLY ONLY BE DONE ON THE SERVER!! (unless your using an executor)
 		}
 	},
 }
@@ -53,7 +52,7 @@ function lib:Initialize(usecoregui)
 	lib.activescreengui = screengui
 end
 
-function lib:NewWindow(properties: {name: string, size: UDim2, theme: string, draggable: boolean})
+function lib:NewWindow(properties: {name: string, size: UDim2, theme: string, draggable: boolean, addblur: boolean})
 	if lib.activescreengui then
 		local theme = lib.themes[properties.theme]
 		if theme then
@@ -86,7 +85,7 @@ function lib:NewWindow(properties: {name: string, size: UDim2, theme: string, dr
 			tabholder.Transparency = theme.windowtabholdertransparency
 			tabholder.BackgroundColor3 = theme.tabholdercolor
 			
-			if theme.addblurtotabholder == true then
+			if properties.addblur == true then
 				local blurframemodule = loadstring(game:HttpGet("https://raw.githubusercontent.com/n6ux/blurframe/main/main.lua"))() --creds to @ImSnox
 				blurframemodule:ModifyFrame(tabholder, "Blur")
 			end
